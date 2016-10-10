@@ -1,0 +1,50 @@
+
+html {
+	background-color:black;
+	padding:0;
+	margin:0;
+}
+body{
+	padding:0;
+	margin:0;
+}
+#logo{
+	border:2px solid white;
+	color:white;
+	float:left;
+	padding: 5px;
+}
+header>ul>li{
+	color:blue;
+	padding:5px;
+	margin:2px;
+	list-style-type: none;
+	float:right;
+}
+header{
+	border-bottom: white 2px solid;	
+}
+footer{
+	border-top: white 2px solid;
+	margin:none;
+	padding:none;
+}
+footer>a{
+	float:right;
+	color:red;
+	margin:2px;
+}
+#titre {
+	text-align:center;
+	color:white;
+}
+#phototoshop>div>a>img{
+	width:33.33%;
+	height:32.5vw;
+	background-color: orange;
+	float:left;
+}
+
+.clear{
+	clear:both;
+}
