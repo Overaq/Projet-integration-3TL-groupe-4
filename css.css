@@ -1,6 +1,6 @@
 
 html {
-	background-color:black;
+	background-color:#252525;
 	padding:0;
 	margin:0;
 }
@@ -13,38 +13,65 @@ body{
 	color:white;
 	float:left;
 	padding: 5px;
+	margin:2vh;
+}
+header>ul{
+	background-color:#252525;
+	float:right;
 }
 header>ul>li{
-	color:blue;
+	color:white;
 	padding:5px;
 	margin:2px;
 	list-style-type: none;
 	float:right;
+	font-family:Verdana;
 }
 header{
-	border-bottom: white 2px solid;	
+	border-bottom: white 2px solid;
+	background-color:#252525;
+	padding-right:1vw;
 }
 footer{
 	border-top: white 2px solid;
 	margin:none;
 	padding:none;
+	background:#252525;
+	height:4vh;
 }
 footer>a{
 	float:right;
 	color:red;
-	margin:2px;
+	margin:10px
 }
 #titre {
 	text-align:center;
 	color:white;
+	height:30vh;
+	background-image:url("../img/freeimages-forest-sunlight-1510824.jpg");
+        background-repeat:no-repeat;
+        background-size:100vw;
+}
+#titre>h1 {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;      
 }
 #phototoshop>div>a>img{
 	width:33.33%;
-	height:32.5vw;
-	background-color: orange;
+	height:40vh;
+	background-color: grey;
 	float:left;
 }
-
+#a_propos{
+	background-color:Blue;
+	height:18vh;
+	overflow-y: scroll;
+	background-image:url("../img/freeimages-wheat-field-1323294.jpg");
+	background-repeat:no-repeat;
+        background-size:100vw;
+	padding:1vw;
+}
 .clear{
 	clear:both;
 }
