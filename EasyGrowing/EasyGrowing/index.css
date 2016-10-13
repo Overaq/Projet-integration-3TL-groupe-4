@@ -34,7 +34,7 @@ a{
 header>ul>li>a:hover{
 	color:green;
 }
-header>ul>li>a:{
+header>ul>li>a:selected{
 	color:#00cc00
 }
 header{
