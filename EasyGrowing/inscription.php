@@ -44,7 +44,7 @@ echo"
 ";
 //Connexion à la BDD
   try {
-      $bdd = new PDO ('mysql:host=localhost;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');
+      $bdd = new PDO ('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');
   }
   catch(Exception $e) {
       die('Erreur :'.$e->getMessage());
@@ -69,7 +69,7 @@ echo"
     else{
         session_start();
         $_SESSION['login'] = $_POST['login'];
-        header('Location: zonePerso.php');
+        header('Location: http://vps319254.ovh.net/EasyGrowing/zonePerso.php');
     }
    }
 ?>

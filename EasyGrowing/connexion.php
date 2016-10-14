@@ -45,7 +45,7 @@ echo"
 </html>
 ";
 // on se connecte à MySQL
-$db = mysql_connect('localhost', 'root', 'L3ff3L3ff3');
+$db = mysql_connect('137.74.169.129', 'root', 'L3ff3L3ff3');
 mysql_select_db('EasyGrowing',$db);
 
 if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['password'])) {
