@@ -41,5 +41,35 @@ echo"
         ".$footer."
     </body>
 </html>
-"
+";
+//Connexion à la BDD
+  try {
+      $bdd = new PDO ('mysql:host=localhost;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');
+  }
+  catch(Exception $e) {
+      die('Erreur :'.$e->getMessage());
+  }
+  if(ISSET($_POST['submit'])) {
+    //On créer les variables
+    $login =   $_POST['login'];
+    $password = $_POST['password'];
+    $password = hash("sha256", $password);
+
+    $req = $bdd->prepare('INSERT INTO membre(login, password) VALUES (:login, :password)');
+
+    $req->execute(array("login" => $login, "password" => $password));
+
+    if(!empty($login) && !empty($password)) {}
+    else{
+        ?>
+        <b>Pseudo ou MDP vide !</b>
+        <?php
+    }
+    if(empty($login) && empty($password)) {}
+    else{
+        session_start();
+        $_SESSION['login'] = $_POST['login'];
+        header('Location: zonePerso.php');
+    }
+   }
 ?>
