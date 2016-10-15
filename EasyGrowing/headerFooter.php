@@ -17,6 +17,7 @@ $header="<header>
                 <li><a href=\"connexion.php\">Connexion</a></li>
                 <li><a href=\"shop.php\">Shop</a></li>
                 <li><a href=\"index.php\">Accueil</a></li>
+                <li><a href=\"zonePerso.php\">Accueil</a></li>
             </ul>
             <div class=\"clear\"></div>
         </header>
