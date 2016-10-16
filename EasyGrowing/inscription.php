@@ -51,7 +51,7 @@ include "Constante.php";
         <form method="POST" action="">
             <table>
                 <tr>
-                    <td align="center">
+                    <td align="right">
                         <label for="pseudo">Pseudo :</label>
                     </td>
                     <td>
@@ -59,7 +59,7 @@ include "Constante.php";
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
+                    <td align="right">
                         <label for="mail">Mail :</label>
                     </td>
                     <td>
@@ -67,7 +67,7 @@ include "Constante.php";
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
+                    <td align="right">
                         <label for="mail2">Confirmation du mail :</label>
                     </td>
                     <td>
@@ -75,7 +75,7 @@ include "Constante.php";
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
+                    <td align="right">
                         <label for="mdp">Mot de passe :</label>
                     </td>
                     <td>
@@ -83,21 +83,16 @@ include "Constante.php";
                     </td>
                 </tr>
                 <tr>
-                    <td align="center">
+                    <td align="right">
                         <label for="mdp2">Confirmation du mot de passe :</label>
                     </td>
                     <td>
                         <input type="password" placeholder="Confirmez votre mdp" id="mdp2" name="mdp2" />
                     </td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td align="center">
-                        <br />
-                        <input type="submit" name="forminscription" value="Je m'inscris" />
-                    </td>
-                </tr>
-            </table>
+                </table>
+		<br>
+		<input type="submit" name="forminscription" value="Je m'inscris" />
         </form>
         <?php
         if(isset($erreur)) {

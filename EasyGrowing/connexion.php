@@ -44,7 +44,7 @@ if(isset($_POST['formconnect']))
                     echo '<color="red">'.$erreur."</font>";
                 }
                 ?>
-                <p>Pas de compte ?</p><br>
+                <p>Pas de compte ?</p>
                 <a href="inscription.php">Créé compte</a>
             </div>
         </main>
