@@ -43,18 +43,6 @@ header{
 	background-color:#252525;
 	padding-right:1vw;
 }
-footer{
-	border-top: white 2px solid;
-	margin:none;
-	padding:none;
-	background:#252525;
-	height:4vh;
-}
-footer>a{
-	float:right;
-	color:red;
-	margin:10px
-}
 #titre {
 	background-color:#F5DEB3;
 	text-align:center;
