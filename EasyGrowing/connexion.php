@@ -27,25 +27,27 @@ if(isset($_POST['formconnect']))
 }
 ?>
 <html>
-<?php echo $head?>
-<body>
-<?php echo $header?>
-<div align="center">
-    <h2>Connexion</h2>
-    <br /><br />
-    <form method="POST" action="">
-        <input type="email" name="mailconnect" placeholder="Mail">
-        <input type="password" name="mdpconnect" placeholder="Mot de passe">
-        <input type="submit" name="formconnect" value="Se Connecter">
-    </form>
-    <?php
-    if(isset($erreur)) {
-        echo '<color="red">'.$erreur."</font>";
-    }
-    ?>
-    <p>Pas de compte ?</p><br>
-    <a href="inscription.php">Créé compte</a>
-</div>
-</body>
+    <?php echo $head?>
+    <body>
+        <?php echo $header?>
+        <main>
+            <div align="center">
+                <h2>Connexion</h2>
+                <br /><br />
+                <form method="POST" action="">
+                    <input type="email" name="mailconnect" placeholder="Mail">
+                    <input type="password" name="mdpconnect" placeholder="Mot de passe">
+                    <input type="submit" name="formconnect" value="Se Connecter">
+                </form>
+                <?php
+                if(isset($erreur)) {
+                    echo '<color="red">'.$erreur."</font>";
+                }
+                ?>
+                <p>Pas de compte ?</p><br>
+                <a href="inscription.php">Créé compte</a>
+            </div>
+        </main>
+    </body>
 </html>
 

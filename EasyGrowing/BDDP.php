@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aquilain
- * Date: 13/10/2016
- * Time: 12:44
- */
+session_start();
 include "Constante.php";
 echo "
 <!Doctype html>

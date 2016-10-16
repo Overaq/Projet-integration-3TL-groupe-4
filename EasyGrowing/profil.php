@@ -12,23 +12,25 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
         <?php echo $head ?>
         <body>
             <?php echo $header?>
-            <div align="center">
-                <h2>Profils de <?php echo $userinfo['pseudo'];?></h2>
-                <br>
-                Pseudo = <?php echo $userinfo['pseudo'];?>
-                <br>
-                Mail = <?php echo $userinfo['mail'];?>
-                <?php
-                if(isset($_SESSION['id']) AND $userinfo['id']== $_SESSION['id'])
-                {
-                ?>
-                <br>
-                <p>Ceci est votre Profil</p>
-                <a href="deconnexion.php">Se déconnecter</a>
-                <?php
-                }
-                ?>
-            </div>
+            <main>
+                <div align="center">
+                    <h2>Profils de <?php echo $userinfo['pseudo'];?></h2>
+                    <br>
+                    Pseudo = <?php echo $userinfo['pseudo'];?>
+                    <br>
+                    Mail = <?php echo $userinfo['mail'];?>
+                    <?php
+                    if(isset($_SESSION['id']) AND $userinfo['id']== $_SESSION['id'])
+                    {
+                    ?>
+                    <br>
+                    <p>Ceci est votre Profil</p>
+                    <a href="deconnexion.php">Se déconnecter</a>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </main>
         </body>
     </html>
     <?php
