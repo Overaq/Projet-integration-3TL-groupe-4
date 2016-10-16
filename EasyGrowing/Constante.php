@@ -21,10 +21,19 @@ $header="
         </a>
         <ul>
             <li><a href=\"BDDP.php\">Base de donnée plantes</a></li>
-            <li><a href=\"connexion.php\">Connexion</a></li>
+            <li>".monProfil()."</li>
             <li><a href=\"index.php\">Accueil</a></li>
         </ul>
         <div class=\"clear\"></div>
     </header>
 ";
+function monProfil (){
+    if (isset($_SESSION['id'])){
+        $numProfils=$_SESSION['id'];
+        echo "<a href=\"profil.php?id=$numProfils\">MonProfil</a>";
+    }
+    else{
+        echo "<a href=\"connexion.php\">Connexion</a>";
+    }
+}
 ?>
