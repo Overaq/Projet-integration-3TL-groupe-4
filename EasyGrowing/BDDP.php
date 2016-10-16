@@ -2,12 +2,12 @@
 session_start();
 include "Constante.php";
 $bddP->exec('SET NAMES utf8');
-$reqPlantes = $bddP->prepare("SELECT * FROM plantes join");
+$reqPlantes = $bddP->prepare("SELECT * FROM plantes ");
 $reqPlantes->execute();
 $tableau="";
 while($plantesinfo =$reqPlantes->fetch()){
     $tableau.="    <tr>
-                    <td><img src=\"img_Plantes/ ".$plantesinfo['addresseImg']."\" alt=\"".$plantesinfo['nomPlantes']."\"></td>
+                    <td><img class=\"tb_BDDP_img\" src=\"img_Plantes/".$plantesinfo['addresseImg']."\" alt=\"".$plantesinfo['nomPlantes']."\"></td>
                     <td>".$plantesinfo['nomPlantes']."</td>
                     <td>description</td>
                    </tr>";
@@ -22,12 +22,12 @@ echo "
 			<div class=\"main\" id=\"BDDP\">
 				<h1>Base de donnée plantes</h1>
 				".$plantesinfo['nomPlantes']."
-				<Table Borde='1'>
+				<Table id='tb_BDDP'>
 				    <tr>
-				        <th>Photo</th>
-				        <th>Nom de la plante</th>
-				        <th>Descriptions</th>
-				        <th><a href='#'>Téléchargements</a></th>
+				        <th class='td_BDDP'>Photo</th>
+				        <th class='td_BDDP'>Nom de la plante</th>
+				        <th class='td_BDDP'>Descriptions</th>
+				        <th class='td_BDDP'><a href='#'>Téléchargements</a></th>
 				    </tr>
 				    ".$tableau."
 				</Ttable>
