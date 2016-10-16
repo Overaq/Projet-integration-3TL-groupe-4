@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "Constante.php";
 $bdd = new PDO('mysql:host=137.74.169.129;dbname=espace_membre', 'root', 'L3ff3L3ff3');
 if(isset($_POST['formconnect']))
 {
@@ -26,11 +27,9 @@ if(isset($_POST['formconnect']))
 }
 ?>
 <html>
-<head>
-    <title>TUTO PHP</title>
-    <meta charset="utf-8">
-</head>
+<?php echo $head?>
 <body>
+<?php echo $header?>
 <div align="center">
     <h2>Connexion</h2>
     <br /><br />

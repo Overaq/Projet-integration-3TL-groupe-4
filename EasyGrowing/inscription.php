@@ -43,6 +43,7 @@ include "Constante.php";
 <html>
 <?php echo $head?>
 <body>
+<?php echo $header?>
 <div align="center">
     <h2>Inscription</h2>
     <br /><br />
