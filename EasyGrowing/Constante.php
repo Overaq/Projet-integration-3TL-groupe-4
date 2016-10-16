@@ -28,12 +28,20 @@ $header="
     </header>
 ";
 function monProfil (){
-    if (isset($_SESSION['id'])){
+    if (isset($_SESSION['id'])And $_SESSION['id']=1){
         $numProfils=$_SESSION['id'];
-        echo "<a href=\"profil.php?id=$numProfils\">MonProfil</a>";
+        return "<a href=\"deconnexion.php\">Déconnexion</a>
+                <li><a href=\"profil.php?id=$numProfils\">MonProfil</a></li>
+                <li><a href=\"http://vps319254.ovh.net/phpmyadmin/\">Administration</a></li>";
+    }
+    elseif (isset($_SESSION['id'])){
+        $numProfils=$_SESSION['id'];
+        return "<a href=\"deconnexion.php\">Déconnexion</a><li><a href=\"profil.php?id=$numProfils\">MonProfil</a></li>";
     }
     else{
-        echo "<a href=\"connexion.php\">Connexion</a>";
+        return "<a href=\"connexion.php\">Connexion</a>";
     }
-}
+};
+$bdd = new PDO('mysql:host=137.74.169.129;dbname=espace_membre', 'root', 'L3ff3L3ff3');
+$bddP = new PDO('mysql:host=137.74.169.129;dbname=Plantes','root', 'L3ff3L3ff3');
 ?>

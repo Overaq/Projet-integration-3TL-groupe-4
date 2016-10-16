@@ -1,5 +1,4 @@
 <?php
-$bdd = new PDO('mysql:host=137.74.169.129;dbname=espace_membre', 'root', 'L3ff3L3ff3');
 if(isset($_POST['forminscription'])) {
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $mail = htmlspecialchars($_POST['mail']);

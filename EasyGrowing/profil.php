@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "Constante.php";
-$bdd = new PDO('mysql:host=137.74.169.129;dbname=espace_membre', 'root', 'L3ff3L3ff3');
 if(isset($_GET['id']) AND $_GET['id']>0) {
     $getid = intval($_GET['id']);
     $requser= $bdd->prepare('select * From membres Where id = ?');

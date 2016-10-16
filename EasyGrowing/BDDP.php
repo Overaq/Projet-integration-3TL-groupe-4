@@ -1,6 +1,9 @@
 <?php
 session_start();
 include "Constante.php";
+$reqPlantes = $bddP->prepare("SELECT * FROM Plantes ");
+$reqPlantes->execute();
+$plantesinfo =$reqPlantes->fetch();
 echo "
 <!Doctype html>
 <html>
@@ -10,7 +13,7 @@ echo "
 		<main>
 			<div class=\"main\" id=\"BDDP\">
 				<h1>Base de donnée plantes</h1>
-				<h2>Désolé nous n'avons pas accès à la base de donnée</h2>
+				".$plantesinfo['nomPlantes']."
 			</div>
 		</main>
 	</body>

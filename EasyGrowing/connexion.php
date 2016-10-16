@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "Constante.php";
-$bdd = new PDO('mysql:host=137.74.169.129;dbname=espace_membre', 'root', 'L3ff3L3ff3');
 if(isset($_POST['formconnect']))
 {
     $mailconnect = htmlspecialchars($_POST['mailconnect']);
