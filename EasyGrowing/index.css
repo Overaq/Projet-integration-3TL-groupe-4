@@ -75,6 +75,9 @@ header{
 #BDDP>h2{
 	text-align: center;
 }
+#BDDP{
+	overflow:auto;
+}
 main>div>a {
 	color:#00cc00
 }
@@ -85,11 +88,13 @@ main>div>a {
 }
 .tb_BDDP_img {
 	color:white;
+	width:20vw;
+	height :20vw;
 }
-#tb_BDDP>td, #tb_BDDP>th {
+#tb_BDDP>tbody>tr>td, #tb_BDDP>tbody>tr>th {
 	border: 1px solid black;
 	width:20vw;
-}
+	text-align:center}
 
 .clear{
 	clear:both;

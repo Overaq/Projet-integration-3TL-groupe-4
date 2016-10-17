@@ -10,6 +10,7 @@ while($plantesinfo =$reqPlantes->fetch()){
                     <td><img class=\"tb_BDDP_img\" src=\"img_Plantes/".$plantesinfo['addresseImg']."\" alt=\"".$plantesinfo['nomPlantes']."\"></td>
                     <td>".$plantesinfo['nomPlantes']."</td>
                     <td>description</td>
+		    <td><a href=\"#\">lien</a></td>
                    </tr>";
 }
 echo "
