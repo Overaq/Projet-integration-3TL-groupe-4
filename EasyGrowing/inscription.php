@@ -1,4 +1,5 @@
 <?php
+include "Constante.php";
 if(isset($_POST['forminscription'])) {
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $mail = htmlspecialchars($_POST['mail']);
@@ -37,7 +38,6 @@ if(isset($_POST['forminscription'])) {
         $erreur = "Tous les champs doivent être complétés !";
     }
 }
-include "Constante.php";
 ?>
 <html>
 <?php echo $head?>
