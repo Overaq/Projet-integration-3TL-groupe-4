@@ -28,7 +28,7 @@ $header="
     </header>
 ";
 function monProfil (){
-    if (isset($_SESSION['id'])And $_SESSION['id']=1){
+    if (isset($_SESSION['id'])And $_SESSION['id']==1){
         $numProfils=$_SESSION['id'];
         return "<a href=\"deconnexion.php\">Déconnexion</a>
                 <li><a href=\"profil.php?id=$numProfils\">MonProfil</a></li>
