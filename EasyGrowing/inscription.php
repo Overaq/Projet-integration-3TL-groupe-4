@@ -16,8 +16,31 @@ if(isset($_POST['forminscription'])) {
                     $mailexist = $reqmail->rowCount();
                     if($mailexist == 0) {
                         if($mdp == $mdp2) {
-                            $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse) VALUES(?, ?, ?)");
-                            $insertmbr->execute(array($pseudo, $mail, $mdp));
+                            $longueurKey=15;
+                            $key="";
+                            for($i=1;$i<$longueurKey;$i++){
+                                $key .= mt_rand(0,9);
+                            }
+                            $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse,confirmkey) VALUES(?, ?, ?,?)");
+                            $insertmbr->execute(array($pseudo, $mail, $mdp ,$key));
+                            $Mailheader="MIME-Version: 1.0\r\n";
+                            $Mailheader='From:"EasyGrowing.com"<aquilain.barvaux@hotmail.com>'."\n";
+                            $Mailheader.='Content-Type:text/html; charset="uft-8"'."\n";
+                            $Mailheader.='Content-Transfer-Encoding: 8bit';
+
+                            $message='
+                            <html>
+                                <body>
+                                    <div align="center">
+                                        <a href="http://vps319254.ovh.net/EasyGrowing/confirmation.php?mail='.urldecode($mail).'&key='.$key.'">Confirmer votre compte</a>
+                                    </div>
+                                 </body>
+                            </html>
+                            ';
+
+                            mail($mail,"Confirmation du compe",$message,$Mailheader);
+
+
                             $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
                         } else {
                             $erreur = "Vos mots de passes ne correspondent pas !";

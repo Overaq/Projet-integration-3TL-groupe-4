@@ -11,10 +11,15 @@ if(isset($_POST['formconnect']))
         $userexist =$requsr-> rowCount();
         if($userexist==1){
             $userinfo=$requsr->fetch();
-            $_SESSION['id']=$userinfo['id'];
-            $_SESSION['pseudo']=$userinfo['pseudo'];
-            $_SESSION['mail']=$userinfo['mail'];
-            header("Location:profil.php?id=".$_SESSION['id']);
+            if($userinfo['confirme']==1) {
+                $_SESSION['id'] = $userinfo['id'];
+                $_SESSION['pseudo'] = $userinfo['pseudo'];
+                $_SESSION['mail'] = $userinfo['mail'];
+                header("Location:profil.php?id=" . $_SESSION['id']);
+            }
+            else {
+                $erreur="Votre mail n'a pas été confirmé";
+            }
         }
         else{
             $erreur="Mauvais Identifiants";
