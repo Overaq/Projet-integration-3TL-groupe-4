@@ -44,7 +44,7 @@ if(isset($_POST['formconnect']))
                 }
                 ?>
                 <p>Pas de compte ?</p>
-                <a href="inscription.php">Créé compte</a>
+                <a href="inscription.php">Créer compte</a>
             </div>
         </main>
     </body>

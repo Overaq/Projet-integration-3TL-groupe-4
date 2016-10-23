@@ -11,7 +11,7 @@ while($plantesinfo =$reqPlantes->fetch()){
         $tableau.="<tr>";
         $i++;
     }
-    elseif ($i==4){
+    elseif ($i==5){
         $tableau.="</tr>";
         $i=1;
     }
