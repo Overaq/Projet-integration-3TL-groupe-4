@@ -24,7 +24,7 @@ if(isset($_POST['forminscription'])) {
                             $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse,confirmkey) VALUES(?, ?, ?,?)");
                             $insertmbr->execute(array($pseudo, $mail, $mdp ,$key));
                             $Mailheader="MIME-Version: 1.0\r\n";
-                            $Mailheader='From:"EasyGrowing.com"<aquilain.barvaux@hotmail.com>'."\n";
+                            $Mailheader='From:"EasyGrowing.com"<overaq@vps319254.ovh.net>'."\n";
                             $Mailheader.='Content-Type:text/html; charset="uft-8"'."\n";
                             $Mailheader.='Content-Transfer-Encoding: 8bit';
 
