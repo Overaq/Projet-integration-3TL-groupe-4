@@ -43,4 +43,5 @@ function monProfil (){
     }
 };
 $bdd = new PDO('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');
+$bdd->exec('SET NAMES utf8');
 ?>
