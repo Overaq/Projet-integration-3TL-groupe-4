@@ -21,7 +21,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
                 $favorisState="<p>Cette plante a été ajoutée à vos favoris</p>";
             }
             else{
-                $favorisState="<br><input type=\"submit\" name=\"formmpp\" value=\"Ajouter cette plante\">";
+                $favorisState="<br><br><input type=\"submit\" name=\"formmpp\" value=\"Ajouter cette plante\">";
             }
         }
     }
