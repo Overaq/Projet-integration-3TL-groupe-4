@@ -20,6 +20,7 @@ echo "
                                 <img class=\"tb_plante_img\" src=\"img_Plantes/".$info['addresseImg']."\" alt = \"".$info['nomPlantes']."\" >
                                 <div id=\"plante_txt\">
                                     Description : ".$info['description']."
+                                    <p id=\"warning\">!!! Attention la modification des données ci-dessous est à vos risques et périls !!!</p>
                                     <form method=\"POST\" action=\"\">
                                         Humidité : <input type=\"number\" name=\"humidite\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['humidite']." > % <br><br>
                                         Doses : <input type=\"number\" name=\"nbrdose\" step=\"1\" max=\"10\" min=\"0\" size=\"4\" value=".$info['doses']."> pcs <br><br>
@@ -36,3 +37,4 @@ echo "
         </html>
     ";
 ?>
+
