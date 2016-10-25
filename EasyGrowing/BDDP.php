@@ -1,8 +1,8 @@
 <?php
 session_start();
 include "Constante.php";
-$bddP->exec('SET NAMES utf8');
-$reqPlantes = $bddP->prepare("SELECT * FROM plantes ");
+$bdd->exec('SET NAMES utf8');
+$reqPlantes = $bdd->prepare("SELECT * FROM plantes ");
 $reqPlantes->execute();
 $tableau="";
 $i=1;
