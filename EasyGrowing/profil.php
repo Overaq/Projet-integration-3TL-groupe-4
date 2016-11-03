@@ -18,7 +18,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
             Pseudo = <?php echo $userinfo['pseudo'];?>
             <br>
             Mail = <?php echo $userinfo['mail'];?>
-            Vos plantes :
+            <br><br>Vos plantes :
             <?php
             $requserplante= $bdd->prepare('select nomPlantes From membres INNER JOIN membre_possede_plante as mpp on membres.id=mpp.id_membres INNER JOIN plantes on mpp.id_plantes=plantes.id where membres.id= ?');
             $requserplante->execute(array($getid));
