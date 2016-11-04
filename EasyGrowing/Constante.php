@@ -5,11 +5,15 @@
  * Date: 13/10/2016
  * Time: 12:34
  */
+$nomPage=SUBSTR($_SERVER['REQUEST_URI'],51);
+$nomPage=str_replace(".php"," ", $nomPage);
+$nomPage=explode(" " , $nomPage);
 $head="
     <head>
 		<meta charset=\"utf-8\">
-		<title>EasyGrowing</title>
+		<title>EasyGrowing".$nomPage['0']." </title>
 		<link href=\"index.css\" rel=\"stylesheet\" type=\"text/css\">
+        <script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js\"></script>
 	</head>
 ";
 $header="
@@ -42,6 +46,6 @@ function monProfil (){
         return "<a href=\"connexion.php\">Connexion</a>";
     }
 };
-$bdd = new PDO('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=EasyGrowing', 'root', '');
 $bdd->exec('SET NAMES utf8');
 ?>

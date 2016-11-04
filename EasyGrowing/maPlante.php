@@ -5,7 +5,7 @@ $bdd->exec('SET NAMES utf8');
 if(isset($_GET['id_m_p']) AND $_GET['id_m_p']>0) {
     $getid = intval($_GET['id_m_p']);
     $req = $bdd->prepare(
-        'Select addresseImg, nomPlantes, description, mpp.humidite as humidite, mpp.doses as doses, mpp.temperature as temperature, mpp.humiditeSol as humiditeSol, mpp.heures as heures, mpp.cycle as cycle 
+        'Select mpp.id_m_p as id_m_p, p.addresseImg, p.nomPlantes, p.description, mpp.humidite as humidite, mpp.doses as doses, mpp.temperature as temperature, mpp.humiditeSol as humiditeSol, mpp.heures as heures, mpp.cycle as cycle 
         from membre_possede_plante as mpp INNER JOIN plantes as p on mpp.id_plantes=p.id where mpp.id_membres = ? and mpp.id_m_p = ?'
     );
     $req->execute(array($_SESSION['id'],$getid));
@@ -32,6 +32,7 @@ echo "
                                         <label for=\"heure_exposition\">Heures d'expositions : </label> <input id=\"heure_exposition\" type=\"time\" name=\"heure_exposition\" value=".$info['heures']."> heure(s) <br><br>
                                         <label for=\"cycle\">cycle(s) : </label><input id=\"cycle\" type=\"number\" name=\"cycle\" step=\"1\" max=\"5\" min=\"0\" size=\"4\" value=".$info['cycle']."> cycle(s)
                                     </form>
+                                    <a href=\"supprimerPlante.php?id=".$info['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$info['nomPlantes']."</a>
                                 </div>
                         <div class=\"clear\"></div>
                     </div>

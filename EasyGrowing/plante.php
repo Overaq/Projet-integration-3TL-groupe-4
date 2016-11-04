@@ -21,7 +21,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
                 $favorisState="<p>Cette plante a été ajoutée à vos favoris</p>";
             }
             else{
-                $favorisState="<br><br><input type=\"submit\" name=\"formmpp\" value=\"Ajouter cette plante avec les valeurs indiquées\">";
+                $favorisState="<br><br><input type=\"submit\" name=\"formmpp\" value=\"Ajouter cette plante à votre profils avec les valeurs indiquées\">";
             }
         }
     }
@@ -50,7 +50,7 @@ echo "
                                         <label for=\"heure_exposition\">Heures d'expositions : </label> <input id=\"heure_exposition\" type=\"time\" name=\"heure_exposition\" value=".$info['heures']."> heure(s) <br><br>
                                         <label for=\"cycle\">cycle(s) : </label><input id=\"cycle\" type=\"number\" name=\"cycle\" step=\"1\" max=\"5\" min=\"0\" size=\"4\" value=".$info['cycle']."> cycle(s)
                                         ".$favorisState."
-                                        <input type=\"reset\" value=\"Reset\"> 
+                                        <input type=\"reset\" value=\"Remettre les valeurs initiales\"> 
                                     </form>
                                 </div>
                         <div class=\"clear\"></div>
