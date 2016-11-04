@@ -20,10 +20,10 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
             Mail = <?php echo $userinfo['mail'];?>
             <br><br>Vos plantes :
             <?php
-            $requserplante= $bdd->prepare('select nomPlantes From membres INNER JOIN membre_possede_plante as mpp on membres.id=mpp.id_membres INNER JOIN plantes on mpp.id_plantes=plantes.id where membres.id= ?');
+            $requserplante= $bdd->prepare('select nomPlantes, id_m_p From membres INNER JOIN membre_possede_plante as mpp on membres.id=mpp.id_membres INNER JOIN plantes on mpp.id_plantes=plantes.id where membres.id= ?');
             $requserplante->execute(array($getid));
             while($userplante =$requserplante->fetch()){
-                echo "<br>".$userplante['nomPlantes']."";
+                echo "<br><a href=\"maPlante.php?id_m_p=".$userplante['id_m_p']."\" class=\"maPlante\">".$userplante['nomPlantes']."</a> [<a href=\"supprimerPlante.php?id=".$userplante['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$userplante['nomPlantes']."</a>]";
             }
             ?>
             <br>

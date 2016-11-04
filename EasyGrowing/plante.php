@@ -16,12 +16,12 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
         }
         else {
             if(isset($_POST['formmpp'])){
-                $insertmpp=$bdd->prepare("INSERT into membre_possede_plante (id_membres,id_plantes) values (?,?)");
-                $insertmpp->execute(array($_SESSION['id'],$getid));
+                $insertmpp=$bdd->prepare("INSERT into membre_possede_plante (id_membres,id_plantes,humidite,doses,temperature,humiditeSol,heures,cycle) values (?,?,?,?,?,?,?,?)");
+                $insertmpp->execute(array($_SESSION['id'],$getid,$_POST['humidite'],$_POST['nbrdose'],$_POST['température'],$_POST['humdité-terre'],$_POST['heure_exposition'],$_POST['cycle']));
                 $favorisState="<p>Cette plante a été ajoutée à vos favoris</p>";
             }
             else{
-                $favorisState="<br><br><input type=\"submit\" name=\"formmpp\" value=\"Ajouter cette plante\">";
+                $favorisState="<br><br><input type=\"submit\" name=\"formmpp\" value=\"Ajouter cette plante avec les valeurs indiquées\">";
             }
         }
     }
@@ -50,6 +50,7 @@ echo "
                                         <label for=\"heure_exposition\">Heures d'expositions : </label> <input id=\"heure_exposition\" type=\"time\" name=\"heure_exposition\" value=".$info['heures']."> heure(s) <br><br>
                                         <label for=\"cycle\">cycle(s) : </label><input id=\"cycle\" type=\"number\" name=\"cycle\" step=\"1\" max=\"5\" min=\"0\" size=\"4\" value=".$info['cycle']."> cycle(s)
                                         ".$favorisState."
+                                        <input type=\"reset\" value=\"Reset\"> 
                                     </form>
                                 </div>
                         <div class=\"clear\"></div>
