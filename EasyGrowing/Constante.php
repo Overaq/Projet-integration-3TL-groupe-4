@@ -43,6 +43,30 @@ $header="
         </div>
     </nav>
 ";
+/*
+$head="
+    <head>
+		<meta charset=\"utf-8\">
+		<title>EasyGrowing</title>
+		<link href=\"index.css\" rel=\"stylesheet\" type=\"text/css\">
+	</head>
+";
+$header="
+    <header>
+        <a href=\"index.php\">
+            <div id=\"logo\">
+                EasyGrowing
+            </div>
+        </a>
+        <ul>
+            <li><a href=\"BDDP.php\">Base de donnée plantes</a></li>
+            <li>".monProfil()."</li>
+            <li><a href=\"index.php\">Accueil</a></li>
+        </ul>
+        <div class=\"clear\"></div>
+    </header>
+";
+*/
 function monProfil (){
     if (isset($_SESSION['id'])And $_SESSION['id']==1){
         $numProfils=$_SESSION['id'];
