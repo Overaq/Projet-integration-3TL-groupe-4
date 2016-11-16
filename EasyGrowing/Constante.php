@@ -58,6 +58,6 @@ function monProfil (){
         return "<a href=\"connexion.php\">Connexion</a>";
     }
 };
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=EasyGrowing', 'root', '');
+$bdd = new PDO('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', '');
 $bdd->exec('SET NAMES utf8');
 ?>
