@@ -12,24 +12,36 @@ $head="
     <head>
 		<meta charset=\"utf-8\">
 		<title>EasyGrowing".$nomPage['0']." </title>
+		<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"/>
+        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js\"></script>
+        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 		<link href=\"index.css\" rel=\"stylesheet\" type=\"text/css\">
         <script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js\"></script>
 	</head>
 ";
 $header="
-    <header>
-        <a href=\"index.php\">
-            <div id=\"logo\">
-                EasyGrowing
+    <nav class=\"nabar navbar-inverse\">
+        <div class=\"container-fluid\">
+            <div class=\"navbar-header\">
+                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#menu\">
+                    <span class=\"icon-bar\"></span>
+                    <span class=\"icon-bar\"></span>
+                    <span class=\"icon-bar\"></span>					
+                </button>
+                <a class=\"navbar-brand\" href='#'>EasyGrowing</a>
             </div>
-        </a>
-        <ul>
-            <li><a href=\"BDDP.php\">Base de donnée plantes</a></li>
-            <li>".monProfil()."</li>
-            <li><a href=\"index.php\">Accueil</a></li>
-        </ul>
-        <div class=\"clear\"></div>
-    </header>
+            <div class=\"collapse navbar-collapse\" id=\"menu\">
+                <ul class=\"nav navbar-nav navbar-right\">
+                    <li class=\"\">
+                        <a href=\"#\">Connexion</a>
+                    </li>
+                    <li class=\"\">
+                        <a href=\"#\">Nos Plantes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 ";
 function monProfil (){
     if (isset($_SESSION['id'])And $_SESSION['id']==1){
