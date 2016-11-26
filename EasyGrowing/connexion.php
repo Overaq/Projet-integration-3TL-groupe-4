@@ -39,7 +39,7 @@ if(isset($_POST['formconnect']))
                 <h2>Connexion</h2>
                 <br /><br />
                 <form method="POST" action="">
-                    <input type="email" name="mailconnect" placeholder="Mail">
+                    <input type="email" name="mailconnect" placeholder="Mail" color="black">
                     <input type="password" name="mdpconnect" placeholder="Mot de passe">
                     <input type="submit" name="formconnect" value="Se Connecter">
                 </form>

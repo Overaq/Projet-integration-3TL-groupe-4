@@ -14,6 +14,11 @@ body{
 	clear:both;
 	height:0;
 }
+button, input, optgroup, select, textarea {
+	margin: 0;
+	font: inherit;
+	color: black;
+}
 /*--------header--------*/
 header{
 	border-bottom: white 2px solid;
@@ -89,8 +94,12 @@ main>div>a {
 	margin : 0 auto;
 	border-collapse: collapse;
 }
+.tb_BDDP_img:hover{
+	border: 2px solid yellow;
+}
 .tb_BDDP_img {
-	margin:0;
+	margin:0.5vw;
+	border-radius:5px;
 	color:white;
 	width:20vw;
 	height :20vw;

@@ -74,7 +74,7 @@ if(isset($_POST['forminscription'])) {
             <table>
                 <tr>
                     <td align="right">
-                        <label for="pseudo">Pseudo :</label>
+                        <label for="pseudo">Pseudo : <br> </label>
                     </td>
                     <td>
                         <input type="text" placeholder="Votre pseudo" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>" />
@@ -82,7 +82,7 @@ if(isset($_POST['forminscription'])) {
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mail">Mail :</label>
+                        <label for="mail">Mail : <br> </label>
                     </td>
                     <td>
                         <input type="email" placeholder="Votre mail" id="mail" name="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" />
@@ -90,7 +90,7 @@ if(isset($_POST['forminscription'])) {
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mail2">Confirmation du mail :</label>
+                        <label for="mail2">Confirmation du mail : <br></label>
                     </td>
                     <td>
                         <input type="email" placeholder="Confirmez votre mail" id="mail2" name="mail2" value="<?php if(isset($mail2)) { echo $mail2; } ?>" />
@@ -98,7 +98,7 @@ if(isset($_POST['forminscription'])) {
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mdp">Mot de passe :</label>
+                        <label for="mdp">Mot de passe : <br></label>
                     </td>
                     <td>
                         <input type="password" placeholder="Votre mot de passe" id="mdp" name="mdp" />
@@ -106,10 +106,10 @@ if(isset($_POST['forminscription'])) {
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mdp2">Confirmation du mot de passe :</label>
+                        <label for="mdp2">Confirmation mot de passe : <br></label>
                     </td>
                     <td>
-                        <input type="password" placeholder="Confirmez votre mdp" id="mdp2" name="mdp2" />
+                        <input type="password" placeholder="Confirmez votre mot de passe" id="mdp2" name="mdp2" />
                     </td>
                 </tr>
                 </table>

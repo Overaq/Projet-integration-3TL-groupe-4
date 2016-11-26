@@ -23,7 +23,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
             $requserplante= $bdd->prepare('select nomPlantes, id_m_p From membres INNER JOIN membre_possede_plante as mpp on membres.id=mpp.id_membres INNER JOIN plantes on mpp.id_plantes=plantes.id where membres.id= ?');
             $requserplante->execute(array($getid));
             while($userplante =$requserplante->fetch()){
-                echo "<br><a href=\"maPlante.php?id_m_p=".$userplante['id_m_p']."\" class=\"maPlante\">".$userplante['nomPlantes']."</a> [<a href=\"supprimerPlante.php?id=".$userplante['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$userplante['nomPlantes']."</a>]";
+                echo "<br><a href=\"maPlante.php?id_m_p=".$userplante['id_m_p']."&id=".$_GET['id']."\" class=\"maPlante\">".$userplante['nomPlantes']."</a> [<a href=\"supprimerPlante.php?id=".$userplante['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$userplante['nomPlantes']."</a>]";
             }
             ?>
             <br>
