@@ -15,8 +15,8 @@ if(isset($_GET['id_m_p']) AND $_GET['id_m_p']>0 AND $_GET['id'] AND $_GET['id']>
         if($_SESSION['id']==$_GET['id']){
             $bouttonPerso= "<a href=\"supprimerPlante.php?id=".$info['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$info['nomPlantes']."</a>";
             if(isset($_POST['formmpp'])){
-                $insertmpp=$bdd->prepare("INSERT into membre_possede_plante (id_membres,id_plantes,humidite,doses,temperature,humiditeSol,heures,cycle) values (?,?,?,?,?,?,?,?)");
-                $insertmpp->execute(array($_SESSION['id'],$getid,$_POST['humidite'],$_POST['nbrdose'],$_POST['température'],$_POST['humdité-terre'],$_POST['heure_exposition'],$_POST['cycle']));
+                $insertmpp=$bdd->prepare("INSERT into membre_possede_plante (humidite,doses,temperature,humiditeSol,heures,cycle) values (?,?,?,?,?,?,?,?) where id_m_p = ?");
+                $insertmpp->execute(array($_POST['humidite'],$_POST['nbrdose'],$_POST['température'],$_POST['humdité-terre'],$_POST['heure_exposition'],$_POST['cycle'],$getid));
                 $bouttonPerso.="<p>Modifiée</p><br><input type=\"submit\" name=\"formmpp\" value=\"Enregistre les valeurs\">";
             }
             else{
