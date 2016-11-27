@@ -31,7 +31,7 @@ echo "
 		".$header."
 		<main>
 			<div class=\"main\" id=\"BDDP\">
-				<h1>Base de donnée plantes</h1>
+				<h1>Base de données plantes</h1>
 				<Table id='tb_BDDP'>
 				    <tbody>
 				    ".$tableau."
