@@ -37,6 +37,7 @@ echo "
                 ".$header."
                 <main>
                     <div class=\"main\" id=\"plante\">
+			<br>
                         <h1>".$info['nomPlantes']."</h1>
                                 <img class=\"tb_plante_img\" src=\"img_Plantes/".$info['addresseImg']."\" alt = \"".$info['nomPlantes']."\" >
                                 <div id=\"plante_txt\">

@@ -9,10 +9,10 @@ include "Constante.php";
             <main>
                 <div align="center">
                     <h2>Notre Produit </h2>
-                    <p>Nous avons mis au point une serre de petite taille entièrement automatisé qui a pour objectif de permettre le dévelopement d'une plante.<br>
+                    <p>Nous avons mis au point une serre de petite taille entièrement automatisée qui a pour objectif de permettre le développement d'une plante.<br>
                         De petite ou moyenne taille votre plante pourra se développer dans des conditions optimales.<br>
-                        Le tout ne demande aucune compétance particulière en jardinage ou en automation tous ce que vous avez à faire est de télécharger le profils de la plante que vous souhaité planté.</p>
-                    <p>A l'heure actuel nous disposons seulement d'un protype dont voici les images : </p>
+                        Le tout ne demande aucune compétence particulière en jardinage ou en automation tout ce que vous avez à faire est de télécharger le profil de la plante que vous souhaitez planter.</p>
+                    <p>A l'heure actuelle nous disposons seulement d'un prototype dont voici les images : </p>
                     <img  class="imgNP" src="img_Produit/notreProduit%20(1).jpg" alt="image du produit">
                     <img  class="imgNP" src="img_Produit/notreProduit%20(2).jpg" alt="image du produit">
                     <img  class="imgNP" src="img_Produit/notreProduit%20(7).jpg" alt="image du produit">
