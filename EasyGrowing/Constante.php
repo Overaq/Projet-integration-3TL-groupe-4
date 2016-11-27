@@ -34,6 +34,9 @@ $header="
             <div class=\"collapse navbar-collapse\" id=\"menu\">
                 <ul class=\"nav navbar-nav navbar-right\">
                     <li class=\"\">".monProfil()."</li>
+                     <li class=\"\">
+                        <a href=\"NotreProduit.php\">Notre produit</a>
+                    </li>
                     <li class=\"\">
                         <a href=\"BDDP.php\">Nos Plantes</a>
                     </li>
@@ -57,6 +60,6 @@ function monProfil (){
         return "<a href=\"connexion.php\">Connexion</a>";
     }
 };
-$bdd = new PDO('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', 'L3ff3L3ff3'); 
-/*$bdd = new PDO('mysql:host=127.0.0.1;dbname=EasyGrowing', 'root', '');*/
+/*$bdd = new PDO('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');*/
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=EasyGrowing', 'root', '');
 $bdd->exec('SET NAMES utf8'); ?>
