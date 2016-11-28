@@ -20,7 +20,7 @@ button, input, optgroup, select, textarea {
 	font: inherit;
 	color: black;
 }
-#centre{
+.centre{
 	text-align:center;
 }
 /*--------header--------*/
