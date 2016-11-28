@@ -45,7 +45,7 @@ echo "
                         <form method=\"POST\" action=\"\">
                             <br>
                             <label for=\"recherche_de_plante\">Recherche par nom : </label> 
-                            <input id=\"recherche_de_plante\" type=\"string\" name=\"recherche_de_plante\"  placeholder=\"Votre recherche\" >
+                            <input id=\"recherche_de_plante\" type=\"text\" name=\"recherche_de_plante\"  placeholder=\"Votre recherche\" >
                             <input type=\"submit\" name=\"recherche\" value=\"Rechercher\">
                             <br><br>
                         </form>
@@ -62,7 +62,7 @@ echo "
 				    <tbody>
 				    ".$tableau."
 				    </tbody>
-				</Ttable>
+				</table>
 			</div>
 		</main>
 	</body>
