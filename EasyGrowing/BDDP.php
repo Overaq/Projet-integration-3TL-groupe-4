@@ -32,7 +32,6 @@ while($plantesinfo =$reqPlantes->fetch()){
     ";
 
 }
-echo $tableau;
 echo "
 <!Doctype html>
 <html>
