@@ -7,12 +7,13 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
     $requser->execute(array($getid));
     $userinfo =$requser->fetch();
     ?>
+    <!DOCTYPE html>
     <html>
     <?php echo $head ?>
     <body>
     <?php echo $header?>
     <main>
-        <div align="center">
+        <div class="centre">
             <h2>Profils de <?php echo $userinfo['pseudo'];?></h2>
             <br>
             Pseudo = <?php echo $userinfo['pseudo'];?>

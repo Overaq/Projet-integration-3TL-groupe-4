@@ -2,12 +2,13 @@
 session_start();
 include "Constante.php";
 ?>
+<!DOCTYPE html>
     <html>
         <?php echo $head ?>
         <body>
             <?php echo $header?>
             <main>
-                <div align="center">
+                <div class="centre">
                     <h2>Notre Produit </h2>
                     <p>Nous avons mis au point une serre de petite taille entièrement automatisée qui a pour objectif de permettre le développement d'une plante.<br>
                         De petite ou moyenne taille votre plante pourra se développer dans des conditions optimales.<br>

@@ -29,6 +29,7 @@ if(isset($_GET['id_m_p']) AND $_GET['id_m_p']>0 AND $_GET['id'] AND $_GET['id']>
 }
 else {header('Location:profil.php');};
 echo "
+        <!DOCTYPE html>
         <html>
             ".$head."
             <body>

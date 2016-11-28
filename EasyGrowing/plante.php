@@ -31,6 +31,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
 }
 else {header('Location:BDDP.php');};
 echo "
+        <!DOCTYPE html>
         <html>
             ".$head."
             <body>

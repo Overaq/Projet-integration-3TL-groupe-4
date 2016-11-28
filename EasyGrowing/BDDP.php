@@ -42,7 +42,7 @@ echo "
 			<div class=\"main\" id=\"BDDP\">
 				<br>
 				<h1>Base de données plantes</h1>
-				    <div id=\"rechercheform\">
+				    <div class=\"centre\">
                         <form method=\"POST\" action=\"#\">
                             <br>
                             <label for=\"recherche_de_plante\">Recherche par nom : </label> 

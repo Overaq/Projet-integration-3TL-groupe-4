@@ -30,12 +30,13 @@ if(isset($_POST['formconnect']))
     }
 }
 ?>
+<!DOCTYPE html>
 <html>
     <?php echo $head?>
     <body>
         <?php echo $header?>
         <main>
-            <div align="center">
+            <div class="centre">
                 <h2>Connexion</h2>
                 <br /><br />
                 <form method="POST" action="">

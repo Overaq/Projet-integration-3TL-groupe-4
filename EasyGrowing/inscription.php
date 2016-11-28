@@ -63,11 +63,12 @@ if(isset($_POST['forminscription'])) {
 }
 ?>
 <html>
+<!DOCTYPE html>
 <?php echo $head?>
 <body>
 <?php echo $header?>
 <main>
-    <div align="center">
+    <div class="centre">
         <h2>Inscription</h2>
         <br /><br />
         <form method="POST" action="">
