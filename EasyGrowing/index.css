@@ -20,6 +20,9 @@ button, input, optgroup, select, textarea {
 	font: inherit;
 	color: black;
 }
+#rechercheform{
+	text-align:center;
+}
 /*--------header--------*/
 header{
 	border-bottom: white 2px solid;
