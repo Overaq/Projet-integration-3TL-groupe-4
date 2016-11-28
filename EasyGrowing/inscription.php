@@ -62,8 +62,8 @@ if(isset($_POST['forminscription'])) {
     }
 }
 ?>
-<html>
 <!DOCTYPE html>
+<html>
 <?php echo $head?>
 <body>
 <?php echo $header?>
@@ -74,7 +74,7 @@ if(isset($_POST['forminscription'])) {
         <form method="POST" action="#">
             <table>
                 <tr>
-                    <td align="right">
+                    <td class="droite">
                         <label for="pseudo">Pseudo : <br> </label>
                     </td>
                     <td>
@@ -82,7 +82,7 @@ if(isset($_POST['forminscription'])) {
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td class="droite">
                         <label for="mail">Mail : <br> </label>
                     </td>
                     <td>
@@ -90,7 +90,7 @@ if(isset($_POST['forminscription'])) {
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td class="droite">
                         <label for="mail2">Confirmation du mail : <br></label>
                     </td>
                     <td>
@@ -98,7 +98,7 @@ if(isset($_POST['forminscription'])) {
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td class="droite">
                         <label for="mdp">Mot de passe : <br></label>
                     </td>
                     <td>
@@ -106,7 +106,7 @@ if(isset($_POST['forminscription'])) {
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td class="droite">
                         <label for="mdp2">Confirmation mot de passe : <br></label>
                     </td>
                     <td>

@@ -23,6 +23,9 @@ button, input, optgroup, select, textarea {
 .centre{
 	text-align:center;
 }
+.droite{
+	text-align: right;
+}
 /*--------header--------*/
 header{
 	border-bottom: white 2px solid;
