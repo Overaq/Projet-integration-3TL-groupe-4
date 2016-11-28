@@ -19,7 +19,7 @@ while($plantesinfo =$reqPlantes->fetch()){
         $i++;
     }
     elseif ($i==5){
-        $tableau.="</tr>";
+        $tableau.="</tr><tr>";
         $i=1;
     }
     else {$i++;}
@@ -30,7 +30,9 @@ while($plantesinfo =$reqPlantes->fetch()){
             </a>
         </td>
     ";
+
 }
+echo $tableau;
 echo "
 <!Doctype html>
 <html>
