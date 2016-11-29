@@ -26,7 +26,7 @@ if(isset($_GET['id_m_p']) AND $_GET['id_m_p']>0 AND $_GET['id'] AND $_GET['id']>
     $req->execute(array($_GET['id'],$getid));
     $info =$req->fetch();
     $bouttonPerso= "<br><br><a href=\"supprimerPlante.php?id=".$info['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$info['nomPlantes']."</a>";
-    $bouttonPerso.$bouttonPerso2;
+    $bouttonPerso.=$bouttonPerso2;
 }
 else {header('Location:profil.php');};
 echo "
