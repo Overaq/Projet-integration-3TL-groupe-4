@@ -132,6 +132,8 @@ main>div>a {
 /*--------fin plante---------*/
 /*--------Notre  Produit---------*/
 .imgNP{
+	max-width:90vw ;
+	max-height:126vw;
 	width:500px;
 	height:700px;
 	margin:0.5vw
