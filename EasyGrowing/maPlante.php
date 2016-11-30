@@ -9,7 +9,7 @@ if(isset($_GET['id_m_p']) AND $_GET['id_m_p']>0 AND $_GET['id'] AND $_GET['id']>
         if($_SESSION['id']==$_GET['id']){
             if(isset($_POST['formmpp'])){
                 $insertmpp=$bdd->prepare("UPDATE membre_possede_plante SET humidite = ? ,doses = ? ,temperature = ? ,humiditeSol = ? ,heures = ? ,cycle = ? where id_m_p = ?");
-                $insertmpp->execute(array($_POST['humidite'],$_POST['nbrdose'],$_POST['température'],$_POST['humdité-terre'],$_POST['heure_exposition'],$_POST['cycle'],$getid));
+                $insertmpp->execute(array(htmlspecialchars($_POST['humidite']),htmlspecialchars($_POST['nbrdose']),htmlspecialchars($_POST['température']),htmlspecialchars($_POST['humdité-terre']),htmlspecialchars($_POST['heure_exposition']),htmlspecialchars($_POST['cycle']),$getid));
                 $bouttonPerso2="<br><p>Modifiée</p><br><input type=\"submit\" name=\"formmpp\" value=\"Enregistre les valeurs\">";
             }
             else{
@@ -25,7 +25,7 @@ if(isset($_GET['id_m_p']) AND $_GET['id_m_p']>0 AND $_GET['id'] AND $_GET['id']>
     );
     $req->execute(array($_GET['id'],$getid));
     $info =$req->fetch();
-    $bouttonPerso= "<br><br><a href=\"supprimerPlante.php?id=".$info['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$info['nomPlantes']."</a>";
+    $bouttonPerso= "<a href=\"supprimerPlante.php?id=".$info['id_m_p']."\" class=\"supprimerPlante\">supprimer ".$info['nomPlantes']."</a>";
     $bouttonPerso.=$bouttonPerso2;
 }
 else {header('Location:profil.php');};
@@ -41,6 +41,7 @@ echo "
                                 <img class=\"tb_plante_img\" src=\"img_Plantes/".$info['addresseImg']."\" alt = \"".$info['nomPlantes']."\" >
                                 <div id=\"plante_txt\">
                                     Description : ".$info['description']."
+                                    <br><br>
                                     <p id=\"warning\">!!! Attention la modification des données ci-dessous est à vos risques et périls !!!</p>
                                     <form method=\"POST\" action=\"\">
                                         <label for=\"humidite\">Humidité : </label> <input id=\"humidite\" type=\"number\" name=\"humidite\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['humidite']." > % <br><br>
@@ -48,7 +49,7 @@ echo "
                                         <label for=\"température\">Température : </label> <input id=\"température\" type=\"number\" name=\"température\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['temperature']."> °C <br><br>
                                         <label for=\"humidité-terre\">Humidité du sol : </label> <input id=\"humidité-terre\" type=\"number\" name=\"humdité-terre\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['humiditeSol']."> % <br><br>
                                         <label for=\"heure_exposition\">Heures d'expositions : </label> <input id=\"heure_exposition\" type=\"time\" name=\"heure_exposition\" value=".$info['heures']."> heure(s) <br><br>
-                                        <label for=\"cycle\">cycle(s) : </label><input id=\"cycle\" type=\"number\" name=\"cycle\" step=\"1\" max=\"5\" min=\"0\" size=\"4\" value=".$info['cycle']."> cycle(s)
+                                        <label for=\"cycle\">cycle(s) : </label><input id=\"cycle\" type=\"number\" name=\"cycle\" step=\"1\" max=\"5\" min=\"0\" size=\"4\" value=".$info['cycle']."> cycle(s) <br><br>
                                     ".$bouttonPerso ."
                                     </form>
                                     

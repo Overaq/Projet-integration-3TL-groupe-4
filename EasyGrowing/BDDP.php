@@ -9,7 +9,7 @@ if (!isset($_POST['recherche'])){
     $reqPlantes->execute();
 }
 elseif (isset($_POST['recherche'])) {
-    $recherche = "%" . $_POST['recherche_de_plante'] . "%";
+    $recherche = "%" . htmlspecialchars($_POST['recherche_de_plante']) . "%";
     $reqPlantes = $bdd->prepare("SELECT * FROM plantes WHERE nomPlantes LIKE ? ");
     $reqPlantes->execute(array($recherche));
 }

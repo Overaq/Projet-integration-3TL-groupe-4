@@ -43,6 +43,7 @@ echo "
                                 <img class=\"tb_plante_img\" src=\"img_Plantes/".$info['addresseImg']."\" alt = \"".$info['nomPlantes']."\" >
                                 <div id=\"plante_txt\">
                                     Description : ".$info['description']."
+                                    <br><br>
                                     <p id=\"warning\">!!! Attention la modification des données ci-dessous est à vos risques et périls !!!</p>
                                     <form method=\"POST\" action=\"\">
                                         <label for=\"humidite\">Humidité : </label> <input id=\"humidite\" type=\"number\" name=\"humidite\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['humidite']." > % <br><br>

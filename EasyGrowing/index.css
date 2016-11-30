@@ -22,6 +22,7 @@ button, input, optgroup, select, textarea {
 }
 .centre{
 	text-align:center;
+	margin:auto;
 }
 .droite{
 	text-align: right;
@@ -138,4 +139,7 @@ main>div>a {
 	height:700px;
 	margin:0.5vw
 }
-
+#NotreProduitP{
+	margin:0 15vw 0 15vw;
+	text-align: left;
+}
