@@ -13,15 +13,15 @@ include "Constante.php";
                     <div id="NotreProduitP">
                         <p>
                             Nous mettons au point une serre de petite taille (40*40*70) entièrement automatisée qui a pour objectif de permettre le développement d'une plante en autonomie.<br>
-                            La serre vous permetra de gérez différents facteurs :
+                            La serre vous permettra de gérer différents facteurs :
                             <ul>
                                 <li>La température</li>
-                                <li>La luminositée</li>
+                                <li>La luminosité</li>
                                 <li>L'humidité du sol</li>
                             </ul>
                             Votre plante pourra donc se développer dans des conditions optimales.<br>
-                            Le tout ne demandera aucune compétence particulière en jardinage ou en automation tout ce que vous avez à faire est de télécharger le profil de la plante que vous souhaitez voir grandir.<br>
-                            Notre site proposera des profils comprenant des configuration de base pour différentes plantes qui seront modifiable pour répondre à vos attentes personelles.<br>
+                            Le tout ne demandera aucune compétence particulière en jardinage ou en automation. Tout ce que vous avez à faire est de télécharger le profil de la plante que vous souhaitez voir grandir.<br>
+                            Notre site proposera des profils comprenant des configurations de base pour différentes plantes qui seront modifiables pour répondre à vos attentes personnelles.<br>
                         </p>
                     </div>
                     <h4>A l'heure actuelle nous disposons seulement d'un prototype dont voici les images : </h4>
