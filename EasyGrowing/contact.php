@@ -4,6 +4,7 @@ if(isset($_POST['mailform']))
 	if(!empty($_POST['name']) AND !empty($_POST['mail']) AND !empty($_POST['msg']))
 	{
 		$header="MIME-Version: 1.0\r\n";
+		$header.="From:overaq@vps319254.ovh.net";
 		$header.='Content-Type:text/html; charset="uft-8"'."\n";
 		$header.='Content-Transfer-Encoding: 8bit';
 		$message='
@@ -28,15 +29,15 @@ if(isset($_POST['mailform']))
 	<body>
 		<h2>Formulaire de contact</h2>
 		<form method="POST" action="">
-			<input type="text" name="name" placeholder="Votre nom" value="<?php if(isset($_POST['name'])) { echo $_POST['nom']; } ?>" required /><br />
+			<input type="text" name="name" placeholder="Votre nom" value="<?php if(isset($_POST['name'])) { echo $_POST['name']; } ?>" required /><br />
 			<input type="email" name="mail" placeholder="Votre email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" required /><br />
-			<textarea name="message" placeholder="Votre message" required><?php if(isset($_POST['message'])) { echo $_POST['msg']; } ?></textarea><br />
+			<textarea name="message" placeholder="Votre message" required><?php if(isset($_POST['msg'])) { echo $_POST['msg']; } ?></textarea><br />
 			<input type="submit" value="Envoyer !" name="mailform"/>
 		</form>
 		<?php
-		if(isset($msg))
+		if(isset($alert))
 		{
-			echo $msg;
+			echo $alert;
 		}
 		?>
 	</body>
