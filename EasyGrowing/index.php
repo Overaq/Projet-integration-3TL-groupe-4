@@ -3,6 +3,8 @@ session_start();
 include "Constante.php";
 echo "
 <!Doctype html>
+
+
 <html>
 	".$head."
 	<body>
@@ -13,6 +15,7 @@ echo "
 			</div>
 			<div class=\"clear\"></div>
 		</main>
+		".$footer."
 	</body>
 </html>
 "

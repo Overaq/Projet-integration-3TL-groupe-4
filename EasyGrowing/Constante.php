@@ -11,7 +11,6 @@ $nomPage=explode(" " , $nomPage);
 $nomPage=str_replace("/"," ", $nomPage);
 $head="
     <head>
-		<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;\" />
 		<meta charset=\"utf-8\">
 		<title>".$nomPage['0']."</title>		
 		<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"/>
@@ -46,6 +45,11 @@ $header="
         </div>
     </nav>
 ";
+$footer="<footer class='navbar navbar-inverse navbar-fixed-bottom'>
+			<div class='container-fluid'>
+				<a class='navbar-brand' href='contact.php'>Contactez nous !</a>
+			</div>
+		</footer>";
 function monProfil (){
     if (isset($_SESSION['id'])And $_SESSION['id']==1){
         $numProfils=$_SESSION['id'];
