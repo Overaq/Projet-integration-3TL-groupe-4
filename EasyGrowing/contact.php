@@ -1,21 +1,12 @@
 <?php
+session_start();
+include "Constante.php";
 if(isset($_POST['mailform']))
 {
 	if(!empty($_POST['name']) AND !empty($_POST['mail']) AND !empty($_POST['msg']))
 	{
-		$header="MIME-Version: 1.0\r\n";
-		$header.="From:overaq@vps319254.ovh.net";
-		$header.='Content-Type:text/html; charset="uft-8"'."\n";
-		$header.='Content-Transfer-Encoding: 8bit';
-		$message='
-		<html>
-			<body>
-					<h3>Nom:</h3>'.$_POST['name'].'<br />
-					<h3>Mail:</h3>'.$_POST['mail'].'<br />
-					'.nl2br($_POST['msg']).'
-			</body>
-		</html>
-		';
+		$header="From:overaq@vps319254.ovh.net";
+		$message='Message de '.$_POST['name'].' contactable à l\'adresse mail suivante: '.$_POST['mail'].' message: '.nl2br($_POST['msg']).' ';
 		mail("thomasdepiereux@gmail.com", "Contact EasyGrowing", $message, $header);
 		$alert="Merci pour votre message";
 	}
