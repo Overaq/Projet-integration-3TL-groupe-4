@@ -31,7 +31,7 @@ if(isset($_POST['mailform']))
 		<form method="POST" action="">
 			<input type="text" name="name" placeholder="Votre nom" value="<?php if(isset($_POST['name'])) { echo $_POST['name']; } ?>" required /><br />
 			<input type="email" name="mail" placeholder="Votre email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" required /><br />
-			<textarea name="message" placeholder="Votre message" required><?php if(isset($_POST['msg'])) { echo $_POST['msg']; } ?></textarea><br />
+			<textarea name="msg" placeholder="Votre message" required><?php if(isset($_POST['msg'])) { echo $_POST['msg']; } ?></textarea><br />
 			<input type="submit" value="Envoyer !" name="mailform"/>
 		</form>
 		<?php
