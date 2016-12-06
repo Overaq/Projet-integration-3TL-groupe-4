@@ -8,8 +8,8 @@
 date_default_timezone_set('Europe/Brussels');
 include "Constante.php";
 $getid=htmlspecialchars($_POST['mail']);
-echo $_POST['data_hum'];
-echo $_POST['data_temp'];
+/**echo $_POST['data_hum'];
+echo $_POST['data_temp'];*/
 $insertmpp=$bdd->prepare('INSERT INTO data_membre(data_temp,data_hum,data_time,id_membre) SELECT ?,?,?, id from membres WHERE mail = ? ');
 $insertmpp->execute(array(htmlspecialchars($_POST['data_temp']),htmlspecialchars($_POST['data_hum']),date('Y-m-d H:i:s'),htmlspecialchars($_POST['mail'])));
 
