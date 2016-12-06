@@ -34,11 +34,10 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
                 ?>
                 <br>
                 <p>Ceci est votre Profil</p>
-                <a href="deconnexion.php">Se déconnecter</a>
                 <?php
             }
             ?>
-        </div>
+
 <p>Flotteur</p>
 <p>Température actuelle: </p>
 <?php
@@ -61,6 +60,7 @@ echo end($actu)['data_temp'].'°C';
 <p>Dernière mise à jour: </p>
 <?php echo end($actu)['data_time']; ?> (UTC+1) 
         <canvas id="myChart" width="120" height="50" ></canvas>
+        </div>
     </main>
    <script src='JS/moment.min.js'></script>
     <script src='JS/Chart.js'></script>

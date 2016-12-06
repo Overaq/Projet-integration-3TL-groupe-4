@@ -41,7 +41,7 @@ if(isset($_POST['forminscription'])) {
                             mail($mail,"Confirmation du compe",$message,$Mailheader);
 
 
-                            $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
+                            $erreur = "Votre compte a bien été créé ! <br> Un mail de confirmation a été envoyé à votre adresse mail (il est probable que ce mail arrive dans vos courrier indésirable) <br><a href=\"connexion.php\">Me connecter</a>";
                         } else {
                             $erreur = "Vos mots de passes ne correspondent pas !";
                         }
@@ -71,9 +71,9 @@ if(isset($_POST['forminscription'])) {
     <div class="centre">
         <h2>Inscription</h2>
         <br /><br />
-        <form method="POST" action="#">
-            <table>
-                <tr>
+        <form method="POST" action="#" class="centre">
+            <table class="centre">
+                <tr >
                     <td class="droite">
                         <label for="pseudo">Pseudo : <br> </label>
                     </td>
