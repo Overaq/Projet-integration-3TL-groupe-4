@@ -38,15 +38,22 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
             }
             ?>
 
-<p>Flotteur</p>
-<p>Température actuelle: </p>
 <?php
 $requactu= $bdd->prepare('select data_temp ,data_hum, data_time from data_membre where id_membre= ?');
             $requactu->execute(array($getid)); 
 $actu =$requactu->fetchAll(PDO::FETCH_ASSOC);
 
 //echo print_r($actu);
-
+if(!$actu){
+echo '<p>Pas de données</p>
+</div>
+    </main></body>
+    </html>';
+return false;}
+?>
+<p>Niveau d'eau:</p>
+<p>Température actuelle: </p>
+<?php
 function inserData($a,$b){
 	$out= "";
 	foreach ($b as $cle => $valeur) {
