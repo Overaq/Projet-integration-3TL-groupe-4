@@ -16,8 +16,8 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
         }
         else {
             if(isset($_POST['formmpp'])){
-                $insertmpp=$bdd->prepare("INSERT into membre_possede_plante (id_membres,id_plantes,humidite,doses,temperature,humiditeSol,heures,cycle) values (?,?,?,?,?,?,?,?)");
-                $insertmpp->execute(array($_SESSION['id'],$getid,$_POST['humidite'],$_POST['nbrdose'],$_POST['température'],$_POST['humdité-terre'],$_POST['heure_exposition'],$_POST['cycle']));
+                $insertmpp=$bdd->prepare("INSERT into membre_possede_plante (id_membres,id_plantes,humidite,temperature,heures) values (?,?,?,?,?)");
+                $insertmpp->execute(array($_SESSION['id'],$getid,$_POST['humidite'],$_POST['température'],$_POST['heure_exposition']));
                 $favorisState="<p>Cette plante a été ajoutée à vos favoris</p>";
             }
             else{
@@ -47,11 +47,8 @@ echo "
                                     <p id=\"warning\">!!! Attention la modification des données ci-dessous est à vos risques et périls !!!</p>
                                     <form method=\"POST\" action=\"\">
                                         <label for=\"humidite\">Humidité : </label> <input id=\"humidite\" type=\"number\" name=\"humidite\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['humidite']." > % <br><br>
-                                        <label for=\"nbrdose\">Doses : </label> <input id=\"nbrdose\" type=\"number\" name=\"nbrdose\" step=\"1\" max=\"10\" min=\"0\" size=\"4\" value=".$info['doses']."> pcs <br><br>
                                         <label for=\"température\">Température : </label> <input id=\"température\" type=\"number\" name=\"température\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['temperature']."> °C <br><br>
-                                        <label for=\"humidité-terre\">Humidité du sol : </label> <input id=\"humidité-terre\" type=\"number\" name=\"humdité-terre\" step=\"1\" max=\"100\" min=\"0\" size=\"4\" value=".$info['humiditeSol']."> % <br><br>
                                         <label for=\"heure_exposition\">Heures d'expositions : </label> <input id=\"heure_exposition\" type=\"time\" name=\"heure_exposition\" value=".$info['heures']."> heure(s) <br><br>
-                                        <label for=\"cycle\">cycle(s) : <br> </label><input id=\"cycle\" type=\"number\" name=\"cycle\" step=\"1\" max=\"5\" min=\"0\" size=\"4\" value=".$info['cycle']."> cycle(s)
                                         ".$favorisState."
                                         <input type=\"reset\" value=\"Remettre les valeurs initiales\"> 
                                     </form>
