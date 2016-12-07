@@ -9,7 +9,7 @@ if(isset($_GET['id_m_p']) AND $_GET['id_m_p']>0 AND $_GET['id'] AND $_GET['id']>
         if($_SESSION['id']==$_GET['id']){
             if(isset($_POST['formmpp'])){
                 $insertmpp=$bdd->prepare("UPDATE membre_possede_plante SET humidite = ? ,temperature = ? ,heures = ? where id_m_p = ?");
-                $insertmpp->execute(array(htmlspecialchars($_POST['humidite']),htmlspecialchars($_POST['nbrdose']),htmlspecialchars($_POST['température']),htmlspecialchars($_POST['humdité-terre']),htmlspecialchars($_POST['heure_exposition']),htmlspecialchars($_POST['cycle']),$getid));
+                $insertmpp->execute(array(htmlspecialchars($_POST['humidite']),htmlspecialchars($_POST['température']),htmlspecialchars($_POST['heure_exposition']),$getid));
                 $bouttonPerso2="<br><p>Modifiée</p><br><input type=\"submit\" name=\"formmpp\" value=\"Enregistre les valeurs\">";
             }
             else{
