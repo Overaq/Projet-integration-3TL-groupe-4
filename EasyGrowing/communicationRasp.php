@@ -21,5 +21,5 @@ $temp=$info['temperature'];
 $humidMax=$info['humidite']+5;
 $humidMin=$info['humidite']-5;
 
-echo $temp.";/n".$humidMax.";/n".$humidMin.";/n".$info['heures'].";"
+echo $temp.";\n".$humidMax.";\n".$humidMin.";\n".$info['heures'].";"
 ?>
