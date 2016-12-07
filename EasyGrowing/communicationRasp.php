@@ -20,6 +20,7 @@ $info =$req->fetch();
 $temp=$info['temperature'];
 $humidMax=$info['humidite']+5;
 $humidMin=$info['humidite']-5;
-
-echo $temp.";\n".$humidMax.";\n".$humidMin.";\n".$info['heures'].";"
+$hToI=$info['heures'];
+$hToI=explode(":" , $hToI);
+echo $temp.";\n".$humidMax.";\n".$humidMin.";\n".$hToI[0].";"
 ?>
