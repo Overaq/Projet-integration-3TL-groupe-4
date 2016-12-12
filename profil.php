@@ -70,7 +70,7 @@ echo end($actu)['data_temp'].'°C';
 <?php 
 $arr="";
 foreach ($actu as $cle => $valeur){
-if(($actu)[$cle]['data_hum']) $arr=($actu)[$cle]['data_time'];
+if($actu[$cle]['data_hum']) $arr=$actu[$cle]['data_time'];
 }
 echo $arr." (UTC+1)"; ?>
 <p>Dernière mise à jour: </p>
