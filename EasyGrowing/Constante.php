@@ -5,21 +5,26 @@
  * Date: 13/10/2016
  * Time: 12:34
  */
+$reset="";
 $nomPage=$_SERVER['REQUEST_URI'];
 $nomPage=str_replace(".php"," ", $nomPage);
 $nomPage=explode(" " , $nomPage);
+if ($nomPage['1']=='profil'){
+    $reset="<meta http-equiv=\"refresh\" content=\"30\">";
+}
 $nomPage=str_replace("/"," ", $nomPage);
 $head="
     <head>
-    		<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;\" />
-		<meta charset=\"utf-8\">
+    	<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;\" />
+		<meta charset=\"utf-8\"> 
+		".$reset."
 		<title>".$nomPage['0']."</title>		
 		<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"/>
         	<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js\"></script>
         	<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 		<link href=\"index.css\" rel=\"stylesheet\" type=\"text/css\">
 		<link rel=\"icon\" type=\"image/png\" href=\"EG.PNG\" />	
-</head>
+    </head>
 ";
 $header="
     <nav class=\"nabar navbar-inverse\">
@@ -66,6 +71,6 @@ function monProfil (){
         return "<a href=\"connexion.php\">Connexion</a>";
     }
 };
-$bdd = new PDO('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');
-/*$bdd = new PDO('mysql:host=127.0.0.1;dbname=EasyGrowing', 'root', '');*/
+/*$bdd = new PDO('mysql:host=137.74.169.129;dbname=EasyGrowing', 'root', 'L3ff3L3ff3');*/
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=EasyGrowing', 'root', '');
 $bdd->exec('SET NAMES utf8'); ?>
