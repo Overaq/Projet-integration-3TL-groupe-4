@@ -103,7 +103,7 @@ main>div>a {
 	border-collapse: collapse;
 }
 .tb_BDDP_img:hover{
-	border: 2px solid yellow;
+	border: 2px solid lightblue;
 }
 .tb_BDDP_img {
 	margin:0.5vw;
@@ -127,7 +127,7 @@ main>div>a {
 	float:left;
 }
 #warning{
-	color:#ff9b00;
+	color:blue;
 	font-weight:bold;
 }
 /*--------fin plante---------*/
