@@ -9,7 +9,7 @@ if (!isset($_POST['recherche'])){
     $reqPlantes->execute();
 }
 elseif (isset($_POST['recherche'])) {
-    $recherche = "%" . $_POST['recherche_de_plante'] . "%";
+    $recherche = "%" . htmlspecialchars($_POST['recherche_de_plante']) . "%";
     $reqPlantes = $bdd->prepare("SELECT * FROM plantes WHERE nomPlantes LIKE ? ");
     $reqPlantes->execute(array($recherche));
 }
@@ -25,9 +25,10 @@ while($plantesinfo =$reqPlantes->fetch()){
     else {$i++;}
     $tableau.="
         <td>
-            <a href =\"plante.php?id=".$plantesinfo['id']."\">
-                <img class=\"tb_BDDP_img\" src=\"img_Plantes/".$plantesinfo['addresseImg']."\" alt=\"".$plantesinfo['nomPlantes']."\">
-            </a>
+                <a  class=\"container\" href =\"plante.php?id=".$plantesinfo['id']."\">
+                    <img class=\"tb_BDDP_img\" src=\"img_Plantes/".$plantesinfo['addresseImg']."\" alt=\"".$plantesinfo['nomPlantes']."\">
+                    <div class=\"center\">".$plantesinfo['nomPlantes']."</div>
+                </a>
         </td>
     ";
 
@@ -42,8 +43,8 @@ echo "
 			<div class=\"main\" id=\"BDDP\">
 				<br>
 				<h1>Base de données plantes</h1>
-				    <div id=\"rechercheform\">
-                        <form method=\"POST\" action=\"\">
+				    <div class=\"centre\">
+                        <form method=\"POST\" action=\"#\">
                             <br>
                             <label for=\"recherche_de_plante\">Recherche par nom : </label> 
                             <input id=\"recherche_de_plante\" type=\"text\" name=\"recherche_de_plante\"  placeholder=\"Votre recherche\" >
