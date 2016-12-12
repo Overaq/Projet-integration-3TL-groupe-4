@@ -10,10 +10,10 @@ $nomPage=$_SERVER['REQUEST_URI'];
 $nomPage=str_replace(".php"," ", $nomPage);
 $nomPage=explode(" " , $nomPage);
 $nomPage=str_replace("/"," ", $nomPage);
-if ($nomPage['0']==' EasyGrowing profil'){$reset="<meta http-equiv=\"refresh\" content=\"30\">";}
+if ($nomPage['0']==' EasyGrowing profil'){$reset="<meta http-equiv=\"refresh\" content=\"300\">";}
 $head="
     <head>
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;\" />
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0\" />
                 <meta charset=\"utf-8\">
                 ".$reset."
                 <title>".$nomPage['0']."</title>
