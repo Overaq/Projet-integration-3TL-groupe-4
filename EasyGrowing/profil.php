@@ -39,7 +39,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
             ?>
 
 <?php
-$requactu= $bdd->prepare('select data_temp ,data_hum, data_time from data_membre where id_membre= ?');
+$requactu= $bdd->prepare('select data_temp ,data_hum, data_res, data_time from data_membre where id_membre= ?');
             $requactu->execute(array($getid)); 
 $actu =$requactu->fetchAll(PDO::FETCH_ASSOC);
 
@@ -52,6 +52,10 @@ echo '<p>Pas de données</p>
 return false;}
 ?>
 <p>Niveau d'eau:</p>
+<?php if(end($actu)['data_res']){
+echo "Bon";} else{
+echo "Vide";
+} ?>
 <p>Température actuelle: </p>
 <?php
 function inserData($a,$b){
@@ -62,8 +66,13 @@ function inserData($a,$b){
 
 echo end($actu)['data_temp'].'°C';
 ?>
-<p>Humidité actuelle: </p>
-<?php echo end($actu)['data_hum'].'%'; ?>
+<p>Dernier arrosage: </p>
+<?php 
+$arr="";
+foreach ($actu as $cle => $valeur){
+if($actu[$cle]['data_hum']) $arr=$actu[$cle]['data_time'];
+}
+echo $arr." (UTC+1)"; ?>
 <p>Dernière mise à jour: </p>
 <?php echo end($actu)['data_time']; ?> (UTC+1) 
         <canvas id="myChart" width="120" height="50" ></canvas>
@@ -72,19 +81,19 @@ echo end($actu)['data_temp'].'°C';
    <script src='JS/moment.min.js'></script>
     <script src='JS/Chart.js'></script>
     <script>
-    Chart.defaults.global.defaultFontColor="#FFF"
+    //Chart.defaults.global.defaultFontColor="#000"
 
 var config = {
   type: 'line',
   data: {
-    labels: [<?php inserData('data_time',$actu); ?>],
+    labels: [<?php inserData('data_time',$actu,1); ?>],
     datasets: [{
-      label: "Humidité en %",
-      data: [<?php inserData('data_hum',$actu); ?>],
+      label: "Arrosage",
+      data: [<?php inserData('data_hum',$actu,10); ?>],
 	backgroundColor: "rgba(153,255,255,0.4)"
     }, {
       label: 'Température en °C',
-      data: [<?php inserData('data_temp',$actu); ?>],
+      data: [<?php inserData('data_temp',$actu,1); ?>],
       backgroundColor: "rgba(255,0,0,0.6)"
     }]
   },

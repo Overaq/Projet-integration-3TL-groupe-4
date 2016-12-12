@@ -30,6 +30,8 @@ include "Constante.php";
                     <img  class="imgNP" src="img_Produit/notreProduit%20(7).jpg" alt="image du produit">
                     <img  class="imgNP" src="img_Produit/notreProduit%20(8).jpg" alt="image du produit">
                     <img  class="imgNP" src="img_Produit/notreProduit%20(6).jpg" alt="image du produit">
+                    <img  class="imgNP" src="img_Produit/notreProduit%20(9).jpg" alt="image du produit">
+
                 </div>
             </main>
         </body>

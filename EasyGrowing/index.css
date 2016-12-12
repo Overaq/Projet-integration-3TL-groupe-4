@@ -63,10 +63,10 @@ header>ul>li>a:hover{
 /*--------main commun--------*/
 main {
 	height:90vh;
-	background:#446820;
+	background-image:url(img_Background/9.png);
 	margin:0;
 	padding:0;
-	color:white;
+	color:black;
 	overflow: auto;
 }
 main>div>h1{

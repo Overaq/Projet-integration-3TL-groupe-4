@@ -10,8 +10,8 @@ include "Constante.php";
 $getid=htmlspecialchars($_POST['mail']);
 /**echo $_POST['data_hum'];
 echo $_POST['data_temp'];*/
-$insertmpp=$bdd->prepare('INSERT INTO data_membre(data_temp,data_hum,data_time,id_membre) SELECT ?,?,?, id from membres WHERE mail = ? ');
-$insertmpp->execute(array(htmlspecialchars($_POST['data_temp']),htmlspecialchars($_POST['data_hum']),date('Y-m-d H:i:s'),htmlspecialchars($_POST['mail'])));
+$insertmpp=$bdd->prepare('INSERT INTO data_membre(data_temp,data_hum,data_res,data_time,id_membre) SELECT ?,?,?,?, id from membres WHERE mail = ? ');
+$insertmpp->execute(array(htmlspecialchars($_POST['data_temp']),htmlspecialchars($_POST['data_hum']),htmlspecialchars($_POST['data_res']),date('Y-m-d H:i:s'),htmlspecialchars($_POST['mail'])));
 
 $req = $bdd->prepare('Select mpp.id_m_p as id_m_p, mpp.humidite as humidite, mpp.temperature as temperature,  mpp.heures as heures
         from membre_possede_plante as mpp INNER JOIN membres as m on mpp.id_membres=m.id where m.mail = ? ');
