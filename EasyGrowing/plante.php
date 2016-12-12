@@ -56,6 +56,7 @@ echo "
                         <div class=\"clear\"></div>
                     </div>
                 </main>
+				".$footer."
             </body>
         </html>
     ";

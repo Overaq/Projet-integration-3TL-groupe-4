@@ -38,6 +38,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
             ?>
         </div>
     </main>
+	<?php echo $footer?>
     </body>
     </html>
     <?php

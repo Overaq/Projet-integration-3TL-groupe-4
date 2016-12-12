@@ -12,6 +12,7 @@ if(isset($_GET['id']) AND $_GET['id']>0) {
     <?php echo $head ?>
     <body>
     <?php echo $header?>
+	<?php echo $footer?>
     <main>
         <div class="centre">
             <h2>Profils de <?php echo $userinfo['pseudo'];?></h2>

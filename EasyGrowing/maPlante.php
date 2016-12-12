@@ -55,6 +55,7 @@ echo "
                     </div>
                 </main>
             </body>
+			".$footer."
         </html>
     ";
 ?>

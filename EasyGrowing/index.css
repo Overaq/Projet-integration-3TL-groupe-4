@@ -130,6 +130,34 @@ main>div>a {
 	color:blue;
 	font-weight:bold;
 }
+article{
+	position: relative;
+	display: block;
+}
+article h3{
+	opacity: 0.0;
+	top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	position: absolute;
+	font-family:Comic Sans, cursive;
+	font-weight: bold;
+	text-align: center;
+	-webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+	color:white;
+	font-size: 2vmax;
+}
+article:hover h3{
+	opacity: 1.0;
+}
+article:hover a{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
 /*--------fin plante---------*/
 /*--------Notre  Produit---------*/
 .imgNP{

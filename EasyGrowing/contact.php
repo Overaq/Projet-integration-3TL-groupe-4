@@ -33,5 +33,6 @@ if(isset($_POST['mailform']))
 			echo $alert;
 		}
 		?>
+		<?php echo $footer?>
 	</body>
 </html>

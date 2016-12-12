@@ -124,5 +124,6 @@ if(isset($_POST['forminscription'])) {
         ?>
     </div>
 </main>
+<?php echo $footer?>
 </body>
 </html>

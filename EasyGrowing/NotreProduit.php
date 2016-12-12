@@ -34,6 +34,7 @@ include "Constante.php";
 
                 </div>
             </main>
+			<?php echo $footer?>
         </body>
     </html>
 

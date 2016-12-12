@@ -53,6 +53,7 @@ if(isset($_POST['formconnect']))
                 <a href="inscription.php">Créer compte</a>
             </div>
         </main>
+		<?php echo $footer?>
     </body>
 </html>
 

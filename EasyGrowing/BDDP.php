@@ -25,10 +25,12 @@ while($plantesinfo =$reqPlantes->fetch()){
     else {$i++;}
     $tableau.="
         <td>
-                <a  class=\"container\" href =\"plante.php?id=".$plantesinfo['id']."\">
-                    <img class=\"tb_BDDP_img\" src=\"img_Plantes/".$plantesinfo['addresseImg']."\" alt=\"".$plantesinfo['nomPlantes']."\">
-                    <div class=\"center\">".$plantesinfo['nomPlantes']."</div>
-                </a>
+			<article>
+				<a  class=\"container\" href =\"plante.php?id=".$plantesinfo['id']."\">
+					<img class=\"tb_BDDP_img\" src=\"img_Plantes/".$plantesinfo['addresseImg']."\" alt=\"".$plantesinfo['nomPlantes']."\">
+				</a>   
+				<h3>".$plantesinfo['nomPlantes']."</h3>
+			</article>
         </td>
     ";
 
@@ -67,6 +69,7 @@ echo "
 				</table>
 			</div>
 		</main>
+		".$footer."
 	</body>
 </html>
 "
