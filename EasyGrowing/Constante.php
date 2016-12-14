@@ -50,11 +50,12 @@ $header="
         </div>
     </nav>
 ";
-$footer="<footer class='navbar navbar-inverse navbar-fixed-bottom'>
+/*$footer="<footer class='navbar navbar-inverse navbar-fixed-bottom'>
 			<div class='container-fluid'>
 				<a class='navbar-brand' href='contact.php'>Contactez nous !</a>
 			</div>
 		</footer>";
+*/
 function monProfil (){
     if (isset($_SESSION['id'])And $_SESSION['id']==1){
         $numProfils=$_SESSION['id'];
